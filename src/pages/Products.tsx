@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import Product from "../components/Product";
-import Modal from "../components/Modal";
+
 
 const API_BASE_URL = "https://dummyjson.com";
 
 const Products = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState<Error | null>(null);
-  const [open, setOpen] = useState(false);
   
   useEffect(() => {
     const fetchData = async () => {
@@ -31,10 +30,9 @@ const Products = ({ addToCart }) => {
     <>
       <ul className="flex flex-wrap justify-between gap-10">
         {products.map((product) => (
-          <Product product={product} key={product.id} addToCart={addToCart} open={open} setOpen={setOpen}/>
+          <Product product={product} key={product.id} addToCart={addToCart}/>
         ))}
       </ul>
-      <Modal />
     </>
   );
 };

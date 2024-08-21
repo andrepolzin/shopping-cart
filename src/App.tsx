@@ -12,7 +12,7 @@ import { useState } from "react";
 export const App = () => {
   const [cart, setCart] = useState([]);
 
-  const addToCart = (item, quantity) => {
+  const addToCart = (item: any, quantity: number) => {
     const currentCartItems = cart;
     const foundItem = currentCartItems.find(
       (eachItem) => eachItem.id == item.id
@@ -26,7 +26,7 @@ export const App = () => {
     }
   };
 
-  const removeFromCart = (productId) => {
+  const removeFromCart = (productId: number) => {
     const newCart = cart.filter(item => productId != item.id)
     setCart(newCart);
   };

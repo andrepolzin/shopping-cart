@@ -1,13 +1,13 @@
 import { useState } from "react";
 import showQuantity from "../util/quantityList"
 
-const Product = ({product, addToCart, setOpen, open}: any) => {
+const Product = ({product, addToCart}: any) => {
 
     const [quantity, setQuantity] = useState(1);
 
   return (
     <li className="bg-white rounded shadow-xl p-4">
-        <img src={product.images[0]} alt={product.title} className="w-96 h-96" onClick={() => setOpen(!open)}/>
+        <img src={product.images[0]} alt={product.title} className="w-96 h-96"/>
         <h2 className="text-lg">{product.title}</h2>
         <p>${product.price}</p>
         <div className="flex justify-start gap-5">

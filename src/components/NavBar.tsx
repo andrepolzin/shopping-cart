@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 
 
-export const NavBar = ({cartSize}) => {
+export const NavBar = ({cartSize}: any) => {
   return (
     <header className="mb-5 text-[#e0f2fe]">
         <h1 className="text-5xl mb-5 ">Welcome to our online store</h1>
